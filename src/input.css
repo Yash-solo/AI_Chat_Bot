@@ -6,6 +6,7 @@
 }
 body{
     height:100vh;
+    padding:15px;
     background:linear-gradient(to top right , #050000,#C300FF,#FF2962);
 }
 .chatSection{
@@ -18,4 +19,8 @@ body{
 .BotType{
     padding:5px;
     padding-left:10px;
+}
+.inputBox{
+    padding:10px;
+
 }
