@@ -4,8 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./src/input.css">
+    <link rel="stylesheet" href="./src/output.css">
 </head>
-<body>
-    
+<body class="flex justify-center items-center ">
+    <div class="flex relative overflow-hidden flex-col items-center border rounded-2xl border-[rgba(255,255,255,0.5)] text-2xl  min-w-9/10 md:min-w-7/10 bg-[rgba(255,255,255,0.5)]">
+        <h1 class="text-4xl md:text-5xl p-5 flex items-center justify-center h-20 w-full  bg-[rgba(0,0,0,0.3)]">AI ChatBot 🤖</h1>
+        <section class="chatSection min-h-170 max-h-170 gap-4 w-full flex flex-col overflow-y-auto">
+            <div class="userType min-h-20 w-1/2 rounded-2xl bg-white  text-3xl ">Hi</div>
+            <div class="BotType min-h-20 w-1/2 rounded-2xl bg-blue-300  text-3xl ">Hello, let's plan your meal</div>
+        </section>
+        <div class="inputAndsend   flex flex-row justify-around items-center bg-[rgba(0,0,0,0.3)] w-full h-20">
+            <input class="h-8/10 w-3/4 px-2 rounded-2xl bg-white "type="text" placeholder="type here">
+            <button class="cursor-pointer pr-3 overflow-hidden h-8/10 w-1/5 flex items-center justify-around rounded-full bg-blue-400"><svg xmlns="http://w3.org" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 2L11 13" />
+                <path d="M22 2L15 22L11 13L2 9L22 2Z" />
+                </svg>
+            </button>
+        </div>
+    </div>
 </body>
 </html>
