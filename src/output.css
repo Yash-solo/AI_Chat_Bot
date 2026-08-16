@@ -289,8 +289,8 @@
     .md\:min-w-3\/10 {
       min-width: calc(3 / 10 * 100%);
     }
-    .md\:min-w-100 {
-      min-width: calc(var(--spacing) * 100);
+    .md\:min-w-70 {
+      min-width: calc(var(--spacing) * 70);
     }
     .md\:text-5xl {
       font-size: var(--text-5xl);
