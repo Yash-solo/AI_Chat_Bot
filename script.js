@@ -27,21 +27,6 @@ send.addEventListener('click',()=>{
     UserTextBox.value = "";
 })
 
-// curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent" \
-//   -H 'Content-Type: application/json' \
-//   -H 'X-goog-api-key: AQ.Ab8RN6JeO7hfTR9sXTjyaCSWYI53u8eY-rr6J0Zz9F6q1jU4cQ' \
-//   -X POST \
-//   -d '{
-//     "contents": [
-//       {
-//         "parts": [
-//           {
-//             "text": "Explain how AI works in a few words"
-//           }
-//         ]
-//       }
-//     ]
-//   }'
 
 function sendData(text){
     console.log(text);
