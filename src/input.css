@@ -1,0 +1,26 @@
+@import "tailwindcss";
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    height:100vh;
+    padding:15px;
+    background:linear-gradient(to top right , #050000,#C300FF,#FF2962);
+}
+.chatSection{
+    padding:15px;
+}
+.userType{
+    padding:5px ;
+    padding-left:10px;
+}
+.BotType{
+    padding:5px;
+    padding-left:10px;
+}
+.inputBox{
+    padding:10px;
+
+}
