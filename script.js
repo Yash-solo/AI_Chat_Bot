@@ -1,10 +1,11 @@
-//import { newApiKey } from "./config.js";
+import { newApiKey } from "./config.js";
 
 let inputBox = document.querySelector('.inputBox');
 const sendBtn = document.querySelector(".sendData");
 const chatSec = document.querySelector('.chatSection');
 const darkModeBtn = document.querySelector(".darkmode")
 const mainBody = document.querySelector(".mainBody");
+
 function userInput(){
     let chat = document.createElement('div');
     chat.classList.add('userType','flex','justify-around','items-center','rounded-2xl','bg-white','max-w-3/4','min-w-1/2');
@@ -43,6 +44,7 @@ async function apiResponse(idea){
     if(response.ok){
         const botinput = data.candidates[0].content.parts[0].text;
         showBOTData(botinput);
+
         return;
     }
     if(!response.ok){
@@ -57,7 +59,7 @@ function showBOTData(botvalue){
     let chat = document.createElement('div');
     chat.classList.add('BotType','flex','justify-around','items-center','rounded-2xl','bg-blue-400','max-w-3/4','min-w-1/2');
     chat.innerHTML = `
-    <p>${botvalue}</p>`
+    <p>"${botvalue}"</p>`
     chatSec.appendChild(chat);
     chat.scrollIntoView({behavior:"smooth"});
 }
