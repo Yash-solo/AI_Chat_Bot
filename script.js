@@ -1,9 +1,10 @@
-import { newApiKey } from "./config.js";
+//import { newApiKey } from "./config.js";
 
 let inputBox = document.querySelector('.inputBox');
 const sendBtn = document.querySelector(".sendData");
 const chatSec = document.querySelector('.chatSection');
-
+const darkModeBtn = document.querySelector(".darkmode")
+const mainBody = document.querySelector(".mainBody");
 function userInput(){
     let chat = document.createElement('div');
     chat.classList.add('userType','flex','justify-around','items-center','rounded-2xl','bg-white','max-w-3/4','min-w-1/2');
@@ -60,3 +61,17 @@ function showBOTData(botvalue){
     chatSec.appendChild(chat);
     chat.scrollIntoView({behavior:"smooth"});
 }
+
+darkModeBtn.addEventListener('click',()=>{
+    if(document.body.style.background == "rgb(41, 41, 41)"){
+        darkModeBtn.style.color = "black";
+        document.body.style.background= "linear-gradient(to top right , #050000,#C300FF,#FF2962)";
+        darkModeBtn.innerHTML = "Dark Mode";
+        document.querySelector('.aiHead').style.color = "Black";
+    }else{
+        document.body.style.background= "rgb(41, 41, 41)";
+        darkModeBtn.style.color = "white";
+        darkModeBtn.innerHTML = "LightMode"
+        document.querySelector('.aiHead').style.color = "white";
+    }
+})
