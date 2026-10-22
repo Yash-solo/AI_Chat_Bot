@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/index.css">
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body>
+    <div class="w-full bg-[rgb(17,17,17)] p-2 h-screen flex items-center justify-center">
+        <div class="w-100 p-3 md:w-130 md:min-h-130 min-h-120 max-h-screen rounded-2xl flex flex-col gap-2 bg-cover bg-[url('/images/colored-7292420_1280.jpg')]">
+            <h1 class="w-full items-center font-semibold">ChatBot</h1>
+            <section class="chatSection bg-[rgba(17,17,17,0.5)] [&::-webkit-scrollbar]:hidden md:min-h-120  min-h-95 flex flex-col p-2 gap-2 max-h-95 overflow-y-auto rounded-2xl border border-[#ddd]">
+                
+                hello
+            </section>
+            <div class="w-full p-1 border border-[#ddd] bg-[rgba(17,17,17,0.5)] rounded-2xl flex items-center justify-end gap-2">
+                <label for="ask">
+                    <input type="text"id="ask" class="focus:outline-0  md:w-100 text-white  p-1 px-2" placeholder="Ask anything">
+                    <button class="p-1 text-white cursor-pointer rounded-2xl px-3 bg-[rgba(17,17,17)]">Send</button>
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="./dist/index.js"></script>
+</body>
+</html>
