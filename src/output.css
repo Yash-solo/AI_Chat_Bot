@@ -168,9 +168,6 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
   .h-screen {
     height: 100vh;
   }
@@ -192,14 +189,8 @@
   .w-full {
     width: 100%;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -238,24 +229,6 @@
   .bg-\[rgba\(17\,17\,17\,0\.5\)\] {
     background-color: rgba(17,17,17,0.5);
   }
-  .bg-\[url\(\'\.\/colored-7292420_1280\.jpg\'\)\] {
-    background-image: url('./colored-7292420_1280.jpg');
-  }
-  .bg-\[url\(\'\.\/images\/bg\.jpg\'\)\] {
-    background-image: url('./images/bg.jpg');
-  }
-  .bg-\[url\(\'\.\/images\/colored-7292420_1280\.jpg\'\)\] {
-    background-image: url('./images/colored-7292420_1280.jpg');
-  }
-  .bg-\[url\(\'\.images\/colored-7292420_1280\.jpg\'\)\] {
-    background-image: url('.images/colored-7292420_1280.jpg');
-  }
-  .bg-\[url\(\'\/images\/colored-7292420_1280\.jpg\'\)\] {
-    background-image: url('/images/colored-7292420_1280.jpg');
-  }
-  .bg-\[url\(\'src\/images\/bg\.jpg\'\)\] {
-    background-image: url('src/images/bg.jpg');
-  }
   .bg-cover {
     background-size: cover;
   }
@@ -281,13 +254,6 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .focus\:outline-0:focus {
     outline-style: var(--tw-outline-style);
     outline-width: 0px;
@@ -309,6 +275,9 @@
   .\[\&\:\:-webkit-scrollbar\]\:hidden::-webkit-scrollbar {
     display: none;
   }
+}
+.bgChat {
+  background-image: url('/images/bg.jpg');
 }
 @property --tw-border-style {
   syntax: "*";
