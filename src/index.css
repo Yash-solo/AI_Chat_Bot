@@ -1,5 +1,19 @@
 @import 'tailwindcss';
 
 .bgChat{
-    background-image: url('/images/bg.jpg');
+    background-color: #ffd072; 
+    background-image: 
+    /* Top left pale lime green */
+    radial-gradient(at 20% 10%, rgba(200, 240, 120, 0.6) 0px, transparent 50%),
+    /* Top right soft lavender/purple */
+    radial-gradient(at 90% 15%, rgba(210, 180, 255, 0.7) 0px, transparent 50%),
+    /* Middle vibrant yellow orb */
+    radial-gradient(at 55% 65%, rgba(255, 215, 0, 1) 0px, transparent 45%),
+    /* Right orange glow */
+    radial-gradient(at 95% 70%, rgba(255, 130, 40, 0.8) 0px, transparent 50%),
+    /* Bottom center/right coral pink */
+    radial-gradient(at 75% 95%, rgba(255, 110, 130, 0.9) 0px, transparent 50%),
+    /* Bottom left soft purple */
+    radial-gradient(at 15% 95%, rgba(190, 140, 255, 0.6) 0px, transparent 50%);
+
 }
