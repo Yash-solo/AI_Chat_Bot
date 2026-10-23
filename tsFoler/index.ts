@@ -14,15 +14,34 @@ if(sendBtn!==null && UserChat!==null){
         getSection?.appendChild(userdiv);
 
         async function getData(){
+            try{
+                const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent", {
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-goog-api-key': 'AQ.Ab8RN6IBTGwIDiSjoPdaaUwWQ3dNaVgnO5fqTo5Nz1eGhlqa4A' 
+                        },
+                        method: 'POST',
+                        body: JSON.stringify({
+                            contents: [{ "parts": [{ "text": usertalk }] }]
+                        })
+                    });
+                    if(response.ok){
+                        const data: JSON = await response.json();
+                        console.log(data);
+                    }else{
+                        console.log("Data not came")
+                    }
+                }catch(err){
+                    console.log("Error came");
+                }
             let botChat: string = "Hi I am currently not able to respond you sorry!";
             const BotDiv = document.createElement('div');
             BotDiv.classList.add("w-full","flex","text-[#2a2a2a]","items-start","justify-start")
             BotDiv.innerHTML = `
             <h1 class="MyBot md:w-1/2 w-3/4 p-2 bg-blue-200 rounded-[10px_10px_10px_0px]">${botChat}</h1>
             `
-            setTimeout(()=>{
-                getSection?.appendChild(BotDiv);
-            },2000);
+            getSection?.appendChild(BotDiv);
+
         }
         getData();
         UserChat.value = "";
