@@ -13,16 +13,7 @@ if (sendBtn !== null && UserChat !== null) {
         getSection?.appendChild(userdiv);
         async function getData() {
             try {
-                const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent", {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-goog-api-key': 'AQ.Ab8RN6IBTGwIDiSjoPdaaUwWQ3dNaVgnO5fqTo5Nz1eGhlqa4A'
-                    },
-                    method: 'POST',
-                    body: JSON.stringify({
-                        contents: [{ "parts": [{ "text": usertalk }] }]
-                    })
-                });
+                const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent");
                 if (response.ok) {
                     const data = await response.json();
                     console.log(data);

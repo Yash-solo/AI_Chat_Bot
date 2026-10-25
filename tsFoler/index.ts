@@ -14,27 +14,32 @@ if(sendBtn!==null && UserChat!==null){
         getSection?.appendChild(userdiv);
 
         async function getData(){
+            let botChat: string = "Hi I am currently not able to respond you sorry!";
             try{
-                const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent", {
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'X-goog-api-key': 'AQ.Ab8RN6IBTGwIDiSjoPdaaUwWQ3dNaVgnO5fqTo5Nz1eGhlqa4A' 
-                        },
-                        method: 'POST',
-                        body: JSON.stringify({
-                            contents: [{ "parts": [{ "text": usertalk }] }]
-                        })
-                    });
+                const response = await fetch("url",{
+                    method:'POST',
+                    headers:{'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        contents: [
+                        {
+                            "parts": [
+                            {
+                                "text": usertalk
+                            }
+                            ]
+                        }
+                        ]
+                    })
+                });
                     if(response.ok){
                         const data: JSON = await response.json();
                         console.log(data);
                     }else{
-                        console.log("Data not came")
+                        botChat = "Data is not seeing properly";
                     }
                 }catch(err){
-                    console.log("Error came");
+                    botChat = "Bot is getting error because of bad response"
                 }
-            let botChat: string = "Hi I am currently not able to respond you sorry!";
             const BotDiv = document.createElement('div');
             BotDiv.classList.add("w-full","flex","text-[#2a2a2a]","items-start","justify-start")
             BotDiv.innerHTML = `
