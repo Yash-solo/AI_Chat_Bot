@@ -3,7 +3,7 @@ const getSection = document.querySelector<HTMLInputElement>('.chatSection');
 const UserChat = document.querySelector<HTMLInputElement>('.UserChat');
 const sendBtn= document.querySelector<HTMLInputElement>('.SEND')
 
-console.log("Get Section:- ",getSection);
+
 if(sendBtn!==null && UserChat!==null){
     sendBtn.addEventListener('click',()=>{
         const usertalk: string = UserChat.value;
@@ -46,13 +46,10 @@ if(sendBtn!==null && UserChat!==null){
             <h1 class="MyBot md:w-1/2 w-3/4 p-2 bg-blue-200 rounded-[10px_10px_10px_0px]">${botChat}</h1>
             `
             getSection?.appendChild(BotDiv);
-
+                
         }
         getData();
         UserChat.value = "";
-
-
-
 
     })
 }
